@@ -1,0 +1,207 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.popup-container {
+  font-size: 1rem;
+  line-height: 2.5rem;
+  padding: 1%;
+  color: #ffff;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.start-btn {
+  border: 2px solid green;
+  background-color: #fff;
+  color: green;
+  border-radius: 15px;
+  padding: 25px 90px;
+  font-size: 30px;
+}
+
+.start-btn:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.container-custom {
+  min-height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  margin: 0 5% 40px 5%;
+  border: 3px solid  black;
+}
+
+.container>div {
+  border: 4px solid black;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+}
+
+a {
+  font-family: Helvetica;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+button {
+  outline: none;
+  border: 4px solid green;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+  color: #f80606;
+}
+
+button:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.play-area {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: black;
+  margin: 0.5% 0;
+  color: white;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid rgb(35, 137, 253);
+  transition: background 0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: #0ff30f;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+.playerWin {
+  font-weight: bold;
+  font-size: 26px;
+  color: green;
+}
+
+.computerWin {
+  font-weight: bold;
+  font-size: 26px;
+  color: red;
+}
+
+.draw {
+  font-weight: bold;
+  font-size: 26px;
+  color: orange;
+}
+
+.won {
+  background-color: green;
+}
+
+#ai_level {
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+
+.navbar>a {
+  color: black;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  font-size: 100px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .block {
+    width: 67px;
+    height: 67px;
+  }
+
+  .play-area {
+    width: 201px;
+    height: 201px;
+  }
+
+  .container-custom {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .table {
+    font-size: 10px;
+    visibility: initial;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  
+}
+
+
+@media screen and (max-width: 1024px) {
+
+}
+
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1792px) {
+
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TicTacToe</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <script src="index.mjs" defer></script>
+</head>
+
+<body>
+
+  <nav class="navbar" id="hero">
+    <a class="navbar-brand" href="#">Tic Tac Toe</a>
+  </nav>
+
+  <!-- instructions phase starts here -->
+  <div class="popup-container">
+    <table>
+      <tr>
+        <th><button type="button" class="player1-btn start-btn" name="button" onclick="singlePlayer()">Single Player</button></th>
+        <th><button type="button" class="player2-btn start-btn" name="button" onclick="twoPlayer()">Two Players</button></th>
+      </tr>
+    </table>
+  </div>
+  </div>
+
+  <!-- New Phase -->
+  <div class="container-custom">
+    <h1>Scoreboard</h1>
+    <table>
+      <tr>
+        <th><button type="button" name="button" onclick="singlePlayer()">Single Player</button></th>
+        <th><button type="button" name="button" onclick="twoPlayer()">Two Players</button></th>
+      </tr>
+    </table>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Game/User</th>
+          <th scope="col" id="Player1">Player</th>
+          <th scope="col" id="Player2">Computer</th>
+        </tr>
+      </thead>
+      <h2 id="move">PLAYER MOVE!</h2>
+      <tbody class="tbody">
+        <tr>
+          <th scope="row" class="table-success">Win</th>
+          <td id="playerstat1" class="playerstat table-success"></td>
+          <td id="computerstat1" class="computerstat table-success"></td>
+        </tr>
+        <tr>
+          <th scope="row" class="table-danger">Lost</th>
+          <td id="loss1" class="computerstat table-danger"></td>
+          <td id="loss2" class="playerstat table-danger"></td>
+        </tr>
+        <tr>
+          <th scope="row" class="table-warning">Draw</th>
+          <td id="draw1" class="drawstat table-warning"></td>
+          <td id="draw2" class="drawstat table-warning"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="play-area" id="play">
+      <div id="block_0" class="block"></div>
+      <div id="block_1" class="block"></div>
+      <div id="block_2" class="block"></div>
+      <div id="block_3" class="block"></div>
+      <div id="block_4" class="block"></div>
+      <div id="block_5" class="block"></div>
+      <div id="block_6" class="block"></div>
+      <div id="block_7" class="block"></div>
+      <div id="block_8" class="block"></div>
+    </div>
+    <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
+
+    <script>
+      function myFunction() {
+        var main = document.body;
+        var hero = document.getElementsByClassName('navbar')[0]
+        var container = document.getElementById('play')
+        var darkToggle = document.getElementsByClassName('btn')
+        var heroText = document.getElementsByClassName('navbar-brand')
+        var arr = Array.prototype.slice.call(heroText)
+
+        arr.forEach(element => {
+          element.classList.toggle('dark-text')
+        });
+
+        if (darkToggle[1].textContent === "Dark Mode") {
+          darkToggle[1].textContent = "Light Mode"
+        } else {
+          darkToggle[1].textContent = "Dark Mode"
+        }
+
+        hero.classList.toggle("dark-hero");
+        main.classList.toggle("dark-main");
+        container.classList.toggle("dark-play")
+      }
+    </script>
+    <select id="ai_level">
+      <option value="easy" selected>Easy</option>
+      <option value="normal">Normal</option>
+      <option value="hard">Hard</option>
+    </select>
+    <div class="div-end-of-game">
+      <!-- <button onclick="reset_board()">RESET BOARD</button> -->
+      <button onclick="undoLastMove()">Undo Move</button>
+      <button id="selectXButton" onclick="selectFirstPlayer('X')">Play O first</button>
+      <button id="selectOButton" onclick="selectFirstPlayer('O')">Play X first</button>
+    </div>
+    <h2 id="winner"></h2>
+  </div>
+
+  <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
